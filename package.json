@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "yarn format && yarn test"
+      "precommit": "xo && CI=true vitest"
     }
   },
   "prettier": {
