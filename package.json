@@ -1,0 +1,79 @@
+{
+  "name": "vite-preact-starter",
+  "description": "a lightly opinionated, zero config starter for high performance preact apps.",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Paul Loffredo",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "npx prettier --write .",
+    "lint": "xo",
+    "test": "xo && CI=true vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "yarn format && yarn test"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "trailingComma": "all"
+  },
+  "xo": {
+    "extends": [
+      "xo-preact",
+      "eslint-config-xo-preact",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "env": [
+      "browser"
+    ],
+    "prettier": true,
+    "plugins": [
+      "unicorn",
+      "react"
+    ],
+    "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@nanostores/preact": "^0.1.3",
+    "@nanostores/router": "^0.3.1",
+    "nanostores": "^0.5.12",
+    "preact": "^10.5.15",
+    "redaxios": "^0.4.1",
+    "twind": "^0.16.16"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.1.5",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/preact": "^2.0.1",
+    "@testing-library/preact-hooks": "^1.1.0",
+    "@vitest/ui": "^0.8.4",
+    "eslint-config-xo": "^0.40.0",
+    "eslint-config-xo-preact": "^1.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "jsdom": "^19.0.0",
+    "prettier": "^2.6.2",
+    "vite": "^2.9.0",
+    "vitest": "^0.8.4",
+    "xo": "^0.48.0"
+  }
+}
