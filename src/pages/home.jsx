@@ -1,12 +1,10 @@
 import {h} from 'preact'
 import BaseLayout from '../layouts/base.jsx'
 
-function Home() {
+export function Home() {
   return (
     <BaseLayout>
       <div>Home Page</div>
     </BaseLayout>
   )
 }
-
-export default Home

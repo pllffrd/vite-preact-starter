@@ -1,7 +1,7 @@
 import {h} from 'preact'
 import BaseLayout from '../layouts/base.jsx'
 
-function About() {
+export function About() {
   return (
     <BaseLayout>
       <div>
@@ -10,5 +10,3 @@ function About() {
     </BaseLayout>
   )
 }
-
-export default About
