@@ -4,7 +4,9 @@ import BaseLayout from '../layouts/base.jsx'
 function About() {
   return (
     <BaseLayout>
-      <div>About Page</div>
+      <div>
+        <h1 tw="text-green-500 text-xl">About Page</h1>
+      </div>
     </BaseLayout>
   )
 }

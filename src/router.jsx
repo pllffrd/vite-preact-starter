@@ -1,9 +1,17 @@
 import {h} from 'preact'
+import {setup} from '@twind/preact'
 import {createRouter} from '@nanostores/router'
 import {useStore} from '@nanostores/preact'
 // Pages
 import Home from './pages/home.jsx'
 import About from './pages/about.jsx'
+
+setup({
+  props: {
+    tw: true,
+    css: true,
+  },
+})
 
 const router = createRouter({
   home: '/',
