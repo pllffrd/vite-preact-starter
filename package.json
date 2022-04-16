@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "precommit": "xo && CI=true vitest"
+      "precommit": "npm run test"
     }
   },
   "prettier": {
